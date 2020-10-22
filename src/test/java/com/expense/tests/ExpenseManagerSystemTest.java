@@ -37,10 +37,10 @@ public class ExpenseManagerSystemTest {
 		
 		
 		//Buggy Code
-		String expectedTitle = "Hello Page";
+		//String expectedTitle = "Hello Page";
 		
 		//Correct Code
-		//String expectedTitle = "Login page";
+		String expectedTitle = "Login page";
 		
 		String actualTitle = driver.getTitle();
 		Assert.assertEquals(expectedTitle, actualTitle);
@@ -54,7 +54,7 @@ public class ExpenseManagerSystemTest {
 		
         if(result.getStatus() == ITestResult.FAILURE) {
 			//You need to give your JIRA Username and Password in below line
-        	BasicCredentials cred = new BasicCredentials("ayushiashu14","@yu$hi@1234");
+        	BasicCredentials cred = new BasicCredentials("","");
 			
 			//You need to update your JIRA machine IP address with port 8080 in below line
         	JiraClient jira = new JiraClient("http://54.89.194.44:8080/", cred);
