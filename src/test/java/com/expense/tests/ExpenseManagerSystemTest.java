@@ -59,7 +59,7 @@ public class ExpenseManagerSystemTest {
 			//You need to update your JIRA machine IP address with port 8080 in below line
         	JiraClient jira = new JiraClient("http://34.204.99.183:8080/", cred);
 			
-        	Issue issueName = jira.createIssue("AUT", "Bug").field(Field.SUMMARY, result.getMethod().getMethodName() +"is failed due to: "+ result.getThrowable().toString()).field(Field.DESCRIPTION, "get the description").execute();
+        	Issue issueName = jira.createIssue("EX", "Bug").field(Field.SUMMARY, result.getMethod().getMethodName() +"is failed due to: "+ result.getThrowable().toString()).field(Field.DESCRIPTION, "get the description").execute();
         	System.out.println("Issue is created in Jira with Issue Key: "+issueName.getKey());
         }
 
